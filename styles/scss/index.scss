@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+$black-color: #000000;
+
+body {
+    font-family: 'Mulish', 'Courier New', Courier, monospace;
+    padding-left: 300px;
+    padding-right: 300px;
+    max-width: 800px;
+}
+@media screen and (max-width: 470px){}
+header {
+    .header-nav {
+        display: grid;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        grid-template-columns: 3fr 2fr;
+
+        a {
+            text-decoration: none;
+            color: $black-color;
+            margin-left: 30px;
+            font-size: 40px;
+            font-family: "Baloo";
+        }
+
+        &:nth-child(2) {
+            justify-self: end;
+
+            a {
+                padding-left: 20px;
+            }
+        }
+    }
+    @media screen and (max-width: 800px) {}
+    .header-view {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+h1 {
+    color: #242635;
+    font-size: 90px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 50px;
+    text-align: center;
+}
+
+p {
+    color: #242635;
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.grid-view {
+    display: grid;
+    gap: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    .animate__animated {
+        &:hover {
+            animation-name: headShake;
+            animation-duration: 1s;
+        }
+    }
+
+    &:nth-child(1) {
+        grid-column: 1/4;
+    }
+
+    .grid-item {
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            width: 864px
+            
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        font-size: 40px;
+
+        h1 {
+            font-size: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        font-size: 20px;
+
+        h1 {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .header-view {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .header-view {
+        font-size: 40px;
+    }
+}
