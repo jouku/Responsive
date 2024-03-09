@@ -24,6 +24,15 @@
                     </a>
                 </div>
                 <div>
+                    <div id="overlay-nav" class="overlay">
+                        <a class="close-button" onclick="closeNav()">&times;</a>
+                        <div class="overlay-content">
+                            <a href="#">Works</a>
+                            <a href="#">Services</a>
+                            <a href="#">Contacts</a>
+                        </div>
+                    </div>
+
                     <nav>
                         <ul>
                             <li><a href="#">Works</a></li>
@@ -33,7 +42,7 @@
                     </nav>
 
                     <div class="point">
-                        <i class="fa-solid fa-ellipsis"></i>
+                        <i class="fa-solid fa-ellipsis" onclick="openNav()"></i>
                     </div>
                 </div>
             </div>
@@ -56,6 +65,17 @@
             </div>
         </div>
     </section>
+
+
+    <script>
+        function openNav() {
+            document.getElementById("overlay-nav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("overlay-nav").style.width = "0%";
+        }
+    </script>
 
 </body>
 

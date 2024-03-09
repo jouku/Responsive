@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
-
-$black-color: #000000;
-$red-color: #a20000;
-$font-family: "Source Sans 3", "Courier New", Courier, monospace;
+@import 'variables';
+@import 'overlay';
 
 body {
     font-family: $font-family;
@@ -29,7 +27,8 @@ header {
                     display: block;
                     text-decoration: none;
                     color: $black-color;
-                    padding-left: 20px;
+                    padding-left: 10px;
+                    padding-right: 10px;
 
                     &:hover {
                         color: $red-color;
@@ -37,8 +36,13 @@ header {
                 }
 
                 .point {
-                    display: none;
                     font-size: 30px;
+                    cursor: pointer;
+                }
+
+                .point,
+                .overlay {
+                    display: none;
                 }
             }
         }
@@ -107,7 +111,9 @@ p {
         .header-nav {
             div {
                 &:nth-child(2) {
-                    .point {
+
+                    .point,
+                    .overlay {
                         display: inline;
                     }
                 }
@@ -147,7 +153,9 @@ p {
         .header-nav {
             div {
                 &:nth-child(2) {
-                    .point {
+
+                    .point,
+                    .overlay {
                         display: none;
                     }
                 }
@@ -187,7 +195,9 @@ p {
         .header-nav {
             div {
                 &:nth-child(2) {
-                    .point {
+
+                    .point,
+                    .overlay {
                         display: none;
                     }
                 }
